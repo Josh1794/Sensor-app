@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "React Native Boilerplate",
+    "slug": "react-native-boilerplate",
+    "privacy": "public",
+    "sdkVersion": "36.0.0",
+    "platforms": ["ios", "android", "web"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./client/assets/icon.png",
+    "splash": {
+      "image": "./client/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "userInterfaceStyle": "automatic"
+    },
+    "description": "Basic React-native shell app with swiping tabs using Expo and UI Kitten",
+    "githubUrl": "https://github.com/Josh1794/React-Native-boilerplate"
+  }
+}
