@@ -1,12 +1,11 @@
 import React from "react";
 import { StyleSheet, StatusBar } from "react-native";
-import { TabOne, TabTwo } from "./client/components";
+import { TabOne, TabTwo, TabThree } from "./client/components";
 import {
   ApplicationProvider,
   Layout,
   Tab,
-  TabView,
-  Text
+  TabView
 } from "react-native-ui-kitten";
 import { mapping, light, dark } from "@eva-design/eva";
 // import { default as appTheme } from "./client/assets/custom-theme.json";
@@ -40,22 +39,21 @@ export default App = () => {
           onSelect={setSelectedIndex}
           style={styles.tabs}
         >
-          <Tab title="TabOne">
+          <Tab title="Gyroscope">
             <Layout style={styles.tabContainer}>
               <TabOne />
             </Layout>
           </Tab>
-          <Tab title="TabTwo">
+          <Tab title="Pedometer">
+            <Layout style={styles.tabContainer}>
+              <TabThree />
+            </Layout>
+          </Tab>
+          <Tab title="Theme">
             <Layout style={styles.tabContainer}>
               <TabTwo toggleTheme={toggleTheme} />
             </Layout>
           </Tab>
-          {/* Additional Tab */}
-          {/* <Tab title="TabThree">
-            <Layout style={styles.tabContainer}>
-              <Text>Sample</Text>
-            </Layout>
-          </Tab> */}
         </TabView>
       </Layout>
     </ApplicationProvider>
