@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Gyroscope } from "expo-sensors";
-import { Text, Layout } from "react-native-ui-kitten";
 
-const TabOne = props => {
+export default function TabOne() {
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -66,7 +65,7 @@ const TabOne = props => {
       </View>
     </View>
   );
-};
+}
 
 function round(n) {
   if (!n) {
@@ -87,5 +86,3 @@ const styles = StyleSheet.create({
     marginTop: 20
   }
 });
-
-export default TabOne;
