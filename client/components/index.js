@@ -1,5 +1,5 @@
-import TabOne from "./TabOne";
-import TabTwo from "./TabTwo";
-import TabThree from "./TabThree";
+import TabOne from "./Gyroscope";
+import TabTwo from "./Theming";
+import TabThree from "./Pedometer";
 
 export { TabOne, TabTwo, TabThree };
