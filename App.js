@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, StatusBar } from "react-native";
-import { TabOne, TabTwo, TabThree } from "./client/components";
+import { TabOne, TabTwo, TabThree, TabFour } from "./client/components";
 import {
   ApplicationProvider,
   Layout,
@@ -47,6 +47,11 @@ export default App = () => {
           <Tab title="Pedometer">
             <Layout style={styles.tabContainer}>
               <TabThree />
+            </Layout>
+          </Tab>
+          <Tab title="Accelerometer">
+            <Layout style={styles.tabContainer}>
+              <TabFour />
             </Layout>
           </Tab>
           <Tab title="Theme">
