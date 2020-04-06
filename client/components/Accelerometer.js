@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Accelerometer } from "expo-sensors";
 
-export default function TabFour() {
+export default function TabFour(props) {
+  const theme = props.theme;
+
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -43,30 +45,57 @@ export default function TabFour() {
   };
 
   let { x, y, z } = data;
-  return (
-    <View style={styles.sensor}>
-      <Text style={styles.text}>
-        Accelerometer: (in Gs where 1 G = 9.81 m s^-2)
-      </Text>
-      <Text style={styles.text}>
-        x: {round(x)} y: {round(y)} z: {round(z)}
-      </Text>
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity onPress={_toggle} style={styles.button}>
-          <Text>Toggle</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={_slow}
-          style={[styles.button, styles.middleButton]}
-        >
-          <Text>Slow</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={_fast} style={styles.button}>
-          <Text>Fast</Text>
-        </TouchableOpacity>
+  if (theme === "dark") {
+    return (
+      <View style={styles.sensor}>
+        <Text style={styles.textDark}>
+          Accelerometer: (in Gs where 1 G = 9.81 m s^-2)
+        </Text>
+        <Text style={styles.textDark}>
+          x: {round(x)} y: {round(y)} z: {round(z)}
+        </Text>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity onPress={_toggle} style={styles.button}>
+            <Text>Toggle</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={_slow}
+            style={[styles.button, styles.middleButton]}
+          >
+            <Text>Slow</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={_fast} style={styles.button}>
+            <Text>Fast</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-    </View>
-  );
+    );
+  } else {
+    return (
+      <View style={styles.sensor}>
+        <Text style={styles.textLight}>
+          Accelerometer: (in Gs where 1 G = 9.81 m s^-2)
+        </Text>
+        <Text style={styles.textLight}>
+          x: {round(x)} y: {round(y)} z: {round(z)}
+        </Text>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity onPress={_toggle} style={styles.button}>
+            <Text>Toggle</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={_slow}
+            style={[styles.button, styles.middleButton]}
+          >
+            <Text>Slow</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={_fast} style={styles.button}>
+            <Text>Fast</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
 }
 
 function round(n) {
@@ -99,7 +128,11 @@ const styles = StyleSheet.create({
     marginTop: 45,
     paddingHorizontal: 10
   },
-  text: {
+  textDark: {
+    textAlign: "center",
+    color: "white"
+  },
+  textLight: {
     textAlign: "center"
   }
 });

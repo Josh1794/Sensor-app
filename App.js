@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, StatusBar } from "react-native";
-import { TabOne, TabTwo, TabThree, TabFour } from "./client/components";
+import { TabOne, TabThree, TabFour } from "./client/components";
 import {
   ApplicationProvider,
   Layout,
@@ -10,17 +10,10 @@ import {
 import { mapping, light, dark } from "@eva-design/eva";
 import { Appearance } from "react-native-appearance";
 
-// import { default as appTheme } from "./client/assets/custom-theme.json";
-
 const themes = { light, dark };
-// const themes = { light, appTheme };
 
 export default App = () => {
-  const [theme, setTheme] = React.useState(Appearance.getColorScheme());
-
-  const toggleTheme = () => {
-    setTheme(Appearance.getColorScheme());
-  };
+  const [theme] = React.useState(Appearance.getColorScheme());
 
   let statusColor = "";
   if (theme === "light") {
@@ -42,17 +35,17 @@ export default App = () => {
         >
           <Tab title="Gyroscope">
             <Layout style={styles.tabContainer}>
-              <TabOne />
+              <TabOne theme={theme} />
             </Layout>
           </Tab>
           <Tab title="Pedometer">
             <Layout style={styles.tabContainer}>
-              <TabThree />
+              <TabThree theme={theme} />
             </Layout>
           </Tab>
           <Tab title="Accelerometer">
             <Layout style={styles.tabContainer}>
-              <TabFour />
+              <TabFour theme={theme} />
             </Layout>
           </Tab>
         </TabView>
