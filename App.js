@@ -8,17 +8,18 @@ import {
   TabView
 } from "react-native-ui-kitten";
 import { mapping, light, dark } from "@eva-design/eva";
+import { Appearance } from "react-native-appearance";
+
 // import { default as appTheme } from "./client/assets/custom-theme.json";
 
 const themes = { light, dark };
 // const themes = { light, appTheme };
 
 export default App = () => {
-  const [theme, setTheme] = React.useState("light");
+  const [theme, setTheme] = React.useState(Appearance.getColorScheme());
 
   const toggleTheme = () => {
-    const nextTheme = theme === "light" ? "dark" : "light"; // to make custom theme replace dark/light with theme name (i.e appTheme)
-    setTheme(nextTheme);
+    setTheme(Appearance.getColorScheme());
   };
 
   let statusColor = "";
@@ -52,11 +53,6 @@ export default App = () => {
           <Tab title="Accelerometer">
             <Layout style={styles.tabContainer}>
               <TabFour />
-            </Layout>
-          </Tab>
-          <Tab title="Theme">
-            <Layout style={styles.tabContainer}>
-              <TabTwo toggleTheme={toggleTheme} />
             </Layout>
           </Tab>
         </TabView>
