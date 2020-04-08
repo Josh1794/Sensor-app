@@ -6,13 +6,12 @@
     "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./client/assets/icon.jpg",
+    "icon": "./client/assets/icon.png",
     "splash": {
       "image": "./client/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "owner": "Joshua Grossman",
     "updates": {
       "fallbackToCacheTimeout": 0
     },
