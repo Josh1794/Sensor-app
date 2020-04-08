@@ -1,11 +1,11 @@
 import React from "react";
 import { StyleSheet, StatusBar } from "react-native";
-import { TabOne, TabThree, TabFour } from "./client/components";
+import { TabOne, TabThree, TabFour, TabFive } from "./client/components";
 import {
   ApplicationProvider,
   Layout,
   Tab,
-  TabView
+  TabView,
 } from "react-native-ui-kitten";
 import { mapping, light, dark } from "@eva-design/eva";
 import { Appearance } from "react-native-appearance";
@@ -48,6 +48,11 @@ export default App = () => {
               <TabFour theme={theme} />
             </Layout>
           </Tab>
+          <Tab title="Barometer">
+            <Layout style={styles.tabContainer}>
+              <TabFive theme={theme} />
+            </Layout>
+          </Tab>
         </TabView>
       </Layout>
     </ApplicationProvider>
@@ -57,10 +62,10 @@ export default App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: 200
+    height: 200,
   },
   tabs: {
     flex: 1,
-    marginTop: 50
-  }
+    marginTop: 50,
+  },
 });

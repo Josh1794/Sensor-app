@@ -7,11 +7,11 @@
 - Gyroscope
 - Accelerometer
 - Pedometer
+- Barometer
 - Dark mode/Light mode based on system settings
 
 ### Coming Soon
 
-- Barometer
 - Speedometer
 - Improved UI
 

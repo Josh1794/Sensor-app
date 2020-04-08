@@ -20,7 +20,7 @@
       "supportsTablet": true,
       "userInterfaceStyle": "automatic"
     },
-    "description": "Basic React-native shell app with swiping tabs using Expo and UI Kitten",
-    "githubUrl": "https://github.com/Josh1794/React-Native-boilerplate"
+    "description": "An app allowing users to explore the sensors in a modern smartphone",
+    "githubUrl": "https://github.com/Josh1794/Sensor-app"
   }
 }
