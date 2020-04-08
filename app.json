@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "React Native Boilerplate",
-    "slug": "react-native-boilerplate",
+    "name": "Sensors",
+    "slug": "sensor-app",
     "privacy": "public",
     "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
@@ -12,13 +12,15 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "owner": "Joshua Grossman",
     "updates": {
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "userInterfaceStyle": "automatic"
+      "userInterfaceStyle": "automatic",
+      "bundleIdentifier": "smartphone.sensor.app"
     },
     "description": "An app allowing users to explore the sensors in a modern smartphone",
     "githubUrl": "https://github.com/Josh1794/Sensor-app"
