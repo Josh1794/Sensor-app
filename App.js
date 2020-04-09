@@ -6,9 +6,7 @@ import {
   Layout,
   Tab,
   TabView,
-  TopNavigation,
-  Icon,
-} from "react-native-ui-kitten";
+} from "@ui-kitten/components";
 import { mapping, light, dark } from "@eva-design/eva";
 import { Appearance } from "react-native-appearance";
 
@@ -30,7 +28,6 @@ export default App = () => {
     <ApplicationProvider mapping={mapping} theme={themes[theme]}>
       <StatusBar barStyle={`${statusColor}`} />
       <Layout style={styles.container}>
-        <TopNavigation title="Sensors" style={styles.topBar} />
         <TabView
           selectedIndex={selectedIndex}
           onSelect={setSelectedIndex}
@@ -69,11 +66,6 @@ const styles = StyleSheet.create({
   },
   tabs: {
     flex: 1,
-  },
-  topBar: {
-    flex: 0.1,
-    minHeight: 10,
-    marginTop: 30,
-    paddingVertical: 0,
+    marginTop: 50,
   },
 });

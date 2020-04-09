@@ -11,7 +11,7 @@ export default class TabThree extends React.Component {
     isPedometerAvailable: "checking",
     pastStepCount: 0,
     currentStepCount: 0,
-    theme: this.props.theme
+    theme: this.props.theme,
   };
 
   componentDidMount() {
@@ -23,21 +23,21 @@ export default class TabThree extends React.Component {
   }
 
   _subscribe = () => {
-    this._subscription = Pedometer.watchStepCount(result => {
+    this._subscription = Pedometer.watchStepCount((result) => {
       this.setState({
-        currentStepCount: result.steps
+        currentStepCount: result.steps,
       });
     });
 
     Pedometer.isAvailableAsync().then(
-      result => {
+      (result) => {
         this.setState({
-          isPedometerAvailable: String(result)
+          isPedometerAvailable: String(result),
         });
       },
-      error => {
+      (error) => {
         this.setState({
-          isPedometerAvailable: "Could not get isPedometerAvailable: " + error
+          isPedometerAvailable: "Could not get isPedometerAvailable: " + error,
         });
       }
     );
@@ -46,12 +46,12 @@ export default class TabThree extends React.Component {
     const start = new Date();
     start.setDate(end.getDate() - 1);
     Pedometer.getStepCountAsync(start, end).then(
-      result => {
+      (result) => {
         this.setState({ pastStepCount: result.steps });
       },
-      error => {
+      (error) => {
         this.setState({
-          pastStepCount: "Could not get stepCount: " + error
+          pastStepCount: "Could not get stepCount: " + error,
         });
       }
     );
@@ -67,13 +67,13 @@ export default class TabThree extends React.Component {
       return (
         <View style={styles.container}>
           <Text style={styles.textDark}>
-            Pedometer.isAvailableAsync(): {this.state.isPedometerAvailable}
+            Pedometer Availability: {this.state.isPedometerAvailable}
           </Text>
           <Text style={styles.textDark}>
             Steps taken in the last 24 hours: {this.state.pastStepCount}
           </Text>
           <Text style={styles.textDark}>
-            Walk! And watch this go up: {this.state.currentStepCount}
+            Steps taken while this app was open: {this.state.currentStepCount}
           </Text>
         </View>
       );
@@ -96,9 +96,10 @@ export default class TabThree extends React.Component {
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    marginTop: 10,
   },
   textDark: {
-    color: "white"
-  }
+    color: "white",
+  },
 });
