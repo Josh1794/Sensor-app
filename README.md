@@ -1,12 +1,12 @@
 # Sensor App
 
 <a href="https://twitter.com/intent/follow?screen_name=Coding_Ginger">
-    <img src="https://badgen.net/twitter/follow/Coding_Ginger?icon=twitter&label=%40Coding_Ginger" alt="Official Twitter Handle" />
-  </a>
+  <img src="https://badgen.net/twitter/follow/Coding_Ginger?icon=twitter&label=%40Coding_Ginger" alt="Official Twitter Handle" />
+</a>
 
-  <a href="https://expo.io/@josh1794/sensor-app">
-  <img src="https://badgen.net/github/last-commit/micromatch/micromatch" alt="Last Commit"/>
-  </a>
+<a href="https://expo.io/@josh1794/sensor-app">
+    <img src="https://badgen.net/github/last-commit/Josh1794/Sensor-app" alt="Last Commit"/>
+</a>
 
 ## An app that allows users to explore the various sensors built into a modern smartphone
 
