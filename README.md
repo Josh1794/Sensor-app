@@ -5,8 +5,8 @@
 </a>
 
 <a href="https://expo.io/@josh1794/sensor-app">
-    <img src="https://badgen.net/github/last-commit/Josh1794/Sensor-app" alt="Last Commit"/>
 </a>
+    <img src="https://badgen.net/github/last-commit/Josh1794/Sensor-app" alt="Last Commit"/>
 
 ## An app that allows users to explore the various sensors built into a modern smartphone
 
