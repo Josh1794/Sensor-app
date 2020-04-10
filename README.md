@@ -28,8 +28,5 @@ An app that allows users to explore the various sensors built into a modern smar
 ## Images
 
 ![Accelerometer](client/assets/accelLight.PNG)
-![Accelerometer - Dark Mode](client/assets/accelDark.PNG)
 ![Gyroscope](client/assets/gyroLight.PNG)
-![Gyroscope - Dark Mode](client/assets/gyroDark.PNG)
 ![Pedometer](client/assets/pedometerLight.PNG)
-![Pedometer - Dark Mode](client/assets/pedometerDark.PNG)
