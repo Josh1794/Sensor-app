@@ -1,5 +1,9 @@
 # Sensor App
 
+<a href="https://twitter.com/intent/follow?screen_name=codingGinger">
+    <img src="https://badgen.net/twitter/follow/codingGinger?icon=twitter&label=%40codingGinger" alt="Official Twitter Handle" />
+  </a>
+
 ## An app that allows users to explore the various sensors built into a modern smartphone
 
 ### Features
