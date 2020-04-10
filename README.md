@@ -8,9 +8,11 @@
     <img src="https://badgen.net/github/last-commit/Josh1794/Sensor-app" alt="Last Commit"/>
 </div>
 
-## An app that allows users to explore the various sensors built into a modern smartphone
+## Description
 
-### Features
+An app that allows users to explore the various sensors built into a modern smartphone
+
+## Features
 
 - Gyroscope
 - Accelerometer
@@ -18,12 +20,12 @@
 - Barometer
 - Dark mode/Light mode based on system settings
 
-### Coming Soon
+## Coming Soon
 
 - Speedometer
 - Improved UI
 
-### Images
+## Images
 
 ![Accelerometer](client/assets/accelLight.PNG)
 ![Accelerometer - Dark Mode](client/assets/accelDark.PNG)
