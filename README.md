@@ -7,6 +7,7 @@
 <div>
     <img src="https://badgen.net/github/last-commit/Josh1794/Sensor-app" alt="Last Commit"/>
 </div>
+
 ## An app that allows users to explore the various sensors built into a modern smartphone
 
 ### Features
