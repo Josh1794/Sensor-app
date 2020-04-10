@@ -5,7 +5,7 @@
 </a>
 
 <div>
-    <img src="https://badgen.net/github/last-commit/Josh1794/Sensor-app" alt="Last Commit"/>
+    <img src="https://badgen.net/github/last-commit/:Josh1794/:Sensor-app" alt="Last Commit"/>
 </div>
 
 ## Description
