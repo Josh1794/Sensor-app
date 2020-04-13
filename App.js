@@ -1,16 +1,14 @@
 import React from "react";
-import { StyleSheet, StatusBar } from "react-native";
-import { TabOne, TabThree, TabFour, TabFive } from "./client/components";
-import {
-  ApplicationProvider,
-  Layout,
-  Tab,
-  TabView,
-} from "@ui-kitten/components";
+import { StyleSheet, StatusBar, SafeAreaView } from "react-native";
+import { TabOne, TabThree, TabFour, TabFive, Home } from "./client/components";
+import { ApplicationProvider, Layout } from "@ui-kitten/components";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import { mapping, light, dark } from "@eva-design/eva";
 import { Appearance } from "react-native-appearance";
+import { NavigationContainer } from "@react-navigation/native";
 
 const themes = { light, dark };
+const Drawer = createDrawerNavigator();
 
 export default App = () => {
   const [theme] = React.useState(Appearance.getColorScheme());
@@ -22,39 +20,22 @@ export default App = () => {
     statusColor = "light-content";
   }
 
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
-
   return (
     <ApplicationProvider mapping={mapping} theme={themes[theme]}>
-      <StatusBar barStyle={`${statusColor}`} />
-      <Layout style={styles.container}>
-        <TabView
-          selectedIndex={selectedIndex}
-          onSelect={setSelectedIndex}
-          style={styles.tabs}
-        >
-          <Tab title="Gyroscope">
-            <Layout style={styles.tabContainer}>
-              <TabOne theme={theme} />
-            </Layout>
-          </Tab>
-          <Tab title="Pedometer">
-            <Layout style={styles.tabContainer}>
-              <TabThree theme={theme} />
-            </Layout>
-          </Tab>
-          <Tab title="Accelerometer">
-            <Layout style={styles.tabContainer}>
-              <TabFour theme={theme} />
-            </Layout>
-          </Tab>
-          <Tab title="Barometer">
-            <Layout style={styles.tabContainer}>
-              <TabFive theme={theme} />
-            </Layout>
-          </Tab>
-        </TabView>
-      </Layout>
+      <SafeAreaView style={{ flex: 1 }}>
+        <StatusBar barStyle={`${statusColor}`} />
+        {/* <Layout style={styles.container}> */}
+        <NavigationContainer>
+          <Drawer.Navigator initialRouteName="Home">
+            <Drawer.Screen name="Home" component={Home} />
+            <Drawer.Screen name="Gyroscope" component={TabOne} />
+            <Drawer.Screen name="Pedometer" component={TabThree} />
+            <Drawer.Screen name="Accelerometer" component={TabFour} />
+            <Drawer.Screen name="Barometer" component={TabFive} />
+          </Drawer.Navigator>
+        </NavigationContainer>
+        {/* </Layout> */}
+      </SafeAreaView>
     </ApplicationProvider>
   );
 };

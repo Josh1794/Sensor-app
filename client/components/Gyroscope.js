@@ -34,7 +34,7 @@ export default function TabOne(props) {
   };
 
   const _subscribe = () => {
-    this._subscription = Gyroscope.addListener(gyroscopeData => {
+    this._subscription = Gyroscope.addListener((gyroscopeData) => {
       setData(gyroscopeData);
     });
   };
@@ -105,34 +105,34 @@ function round(n) {
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   buttonContainer: {
     flexDirection: "row",
     alignItems: "stretch",
-    marginTop: 15
+    marginTop: 15,
   },
   button: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#eee",
-    padding: 10
+    padding: 10,
   },
   middleButton: {
     borderLeftWidth: 1,
     borderRightWidth: 1,
-    borderColor: "#ccc"
+    borderColor: "#ccc",
   },
   sensor: {
     marginTop: 45,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
   },
   textDark: {
     textAlign: "center",
-    color: "white"
+    color: "white",
   },
   text: {
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 });
