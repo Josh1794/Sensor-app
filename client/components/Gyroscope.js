@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Gyroscope } from "expo-sensors";
+import { useColorScheme } from "react-native-appearance";
 
-export default function TabOne(props) {
-  const theme = props.theme;
+export default function TabOne() {
+  const theme = useColorScheme();
 
   const [data, setData] = useState({});
 
@@ -125,8 +126,9 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
   },
   sensor: {
-    marginTop: 45,
-    paddingHorizontal: 10,
+    paddingHorizontal: 40,
+    flex: 1,
+    justifyContent: "center",
   },
   textDark: {
     textAlign: "center",

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Accelerometer } from "expo-sensors";
+import { useColorScheme } from "react-native-appearance";
 
-export default function TabFour(props) {
-  const theme = props.theme;
+export default function TabFour() {
+  const theme = useColorScheme();
 
   const [data, setData] = useState({});
 
@@ -34,7 +35,7 @@ export default function TabFour(props) {
   };
 
   const _subscribe = () => {
-    this._subscription = Accelerometer.addListener(accelerometerData => {
+    this._subscription = Accelerometer.addListener((accelerometerData) => {
       setData(accelerometerData);
     });
   };
@@ -110,29 +111,30 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: "row",
     alignItems: "stretch",
-    marginTop: 15
+    marginTop: 15,
   },
   button: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#eee",
-    padding: 10
+    padding: 10,
   },
   middleButton: {
     borderLeftWidth: 1,
     borderRightWidth: 1,
-    borderColor: "#ccc"
+    borderColor: "#ccc",
   },
   sensor: {
-    marginTop: 45,
-    paddingHorizontal: 10
+    flex: 1,
+    alignSelf: "center",
+    justifyContent: "center",
   },
   textDark: {
     textAlign: "center",
-    color: "white"
+    color: "white",
   },
   textLight: {
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 });

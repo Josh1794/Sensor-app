@@ -1,6 +1,7 @@
 import React from "react";
 import { Pedometer } from "expo-sensors";
 import { StyleSheet, Text, View } from "react-native";
+import { useColorScheme } from "react-native-appearance";
 
 export default class TabThree extends React.Component {
   constructor(props) {
@@ -11,11 +12,12 @@ export default class TabThree extends React.Component {
     isPedometerAvailable: "checking",
     pastStepCount: 0,
     currentStepCount: 0,
-    theme: this.props.theme,
+    theme: "",
   };
 
   componentDidMount() {
     this._subscribe();
+    // this.setState({ theme: useColorScheme() });
   }
 
   componentWillUnmount() {
@@ -63,7 +65,7 @@ export default class TabThree extends React.Component {
   };
 
   render() {
-    if (this.state.theme === "dark") {
+    if (this.props.route.params.theme === "dark") {
       return (
         <View style={styles.container}>
           <Text style={styles.textDark}>
@@ -95,9 +97,9 @@ export default class TabThree extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 10,
   },
   textDark: {
     color: "white",

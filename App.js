@@ -1,42 +1,58 @@
 import React from "react";
 import { StyleSheet, StatusBar, SafeAreaView } from "react-native";
-import { TabOne, TabThree, TabFour, TabFive, Home } from "./client/components";
-import { ApplicationProvider, Layout } from "@ui-kitten/components";
+import {
+  TabOne,
+  TabThree,
+  TabFour,
+  TabFive,
+  Home,
+  About,
+} from "./client/components";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { mapping, light, dark } from "@eva-design/eva";
-import { Appearance } from "react-native-appearance";
-import { NavigationContainer } from "@react-navigation/native";
-
-const themes = { light, dark };
-const Drawer = createDrawerNavigator();
+import {
+  AppearanceProvider,
+  useColorScheme,
+  Appearance,
+} from "react-native-appearance";
+import {
+  NavigationContainer,
+  DefaultTheme,
+  DarkTheme,
+} from "@react-navigation/native";
 
 export default App = () => {
-  const [theme] = React.useState(Appearance.getColorScheme());
+  const Drawer = createDrawerNavigator();
+  const scheme = useColorScheme();
 
   let statusColor = "";
-  if (theme === "light") {
-    statusColor = "dark-content";
-  } else {
+  if (scheme === "dark") {
     statusColor = "light-content";
+  } else {
+    statusColor = "dark-content";
   }
 
   return (
-    <ApplicationProvider mapping={mapping} theme={themes[theme]}>
-      <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar barStyle={`${statusColor}`} />
-        {/* <Layout style={styles.container}> */}
-        <NavigationContainer>
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar barStyle={`${statusColor}`} />
+      <AppearanceProvider>
+        <NavigationContainer
+          theme={scheme === "dark" ? DarkTheme : DefaultTheme}
+        >
           <Drawer.Navigator initialRouteName="Home">
             <Drawer.Screen name="Home" component={Home} />
             <Drawer.Screen name="Gyroscope" component={TabOne} />
-            <Drawer.Screen name="Pedometer" component={TabThree} />
+            <Drawer.Screen
+              name="Pedometer"
+              component={TabThree}
+              initialParams={{ theme: useColorScheme() }}
+            />
             <Drawer.Screen name="Accelerometer" component={TabFour} />
             <Drawer.Screen name="Barometer" component={TabFive} />
+            <Drawer.Screen name="About" component={About} />
           </Drawer.Navigator>
         </NavigationContainer>
-        {/* </Layout> */}
-      </SafeAreaView>
-    </ApplicationProvider>
+      </AppearanceProvider>
+    </SafeAreaView>
   );
 };
 

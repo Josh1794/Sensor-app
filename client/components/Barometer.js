@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Barometer } from "expo-sensors";
+import { useColorScheme } from "react-native-appearance";
 
 export default function TabFive(props) {
-  const theme = props.theme;
+  const theme = useColorScheme();
 
   const [data, setData] = useState({});
 
@@ -78,10 +79,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#eee",
     padding: 10,
+    borderRadius: 4,
   },
   sensor: {
-    marginTop: 45,
-    paddingHorizontal: 10,
+    flex: 1,
+    justifyContent: "center",
+    paddingHorizontal: 50,
   },
   textDark: {
     textAlign: "center",
