@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, StatusBar, SafeAreaView } from "react-native";
+import { StatusBar } from "react-native";
 import {
   TabOne,
   TabThree,
@@ -9,16 +9,15 @@ import {
   About,
 } from "./client/components";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import {
-  AppearanceProvider,
-  useColorScheme,
-  Appearance,
-} from "react-native-appearance";
+import { AppearanceProvider, useColorScheme } from "react-native-appearance";
 import {
   NavigationContainer,
   DefaultTheme,
   DarkTheme,
 } from "@react-navigation/native";
+import { enableScreens } from "react-native-screens";
+
+enableScreens();
 
 export default App = () => {
   const Drawer = createDrawerNavigator();
@@ -32,37 +31,22 @@ export default App = () => {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <AppearanceProvider>
       <StatusBar barStyle={`${statusColor}`} />
-      <AppearanceProvider>
-        <NavigationContainer
-          theme={scheme === "dark" ? DarkTheme : DefaultTheme}
-        >
-          <Drawer.Navigator initialRouteName="Home">
-            <Drawer.Screen name="Home" component={Home} />
-            <Drawer.Screen name="Gyroscope" component={TabOne} />
-            <Drawer.Screen
-              name="Pedometer"
-              component={TabThree}
-              initialParams={{ theme: useColorScheme() }}
-            />
-            <Drawer.Screen name="Accelerometer" component={TabFour} />
-            <Drawer.Screen name="Barometer" component={TabFive} />
-            <Drawer.Screen name="About" component={About} />
-          </Drawer.Navigator>
-        </NavigationContainer>
-      </AppearanceProvider>
-    </SafeAreaView>
+      <NavigationContainer theme={scheme === "dark" ? DarkTheme : DefaultTheme}>
+        <Drawer.Navigator initialRouteName="Home">
+          <Drawer.Screen name="Home" component={Home} />
+          <Drawer.Screen name="Gyroscope" component={TabOne} />
+          <Drawer.Screen
+            name="Pedometer"
+            component={TabThree}
+            initialParams={{ theme: useColorScheme() }}
+          />
+          <Drawer.Screen name="Accelerometer" component={TabFour} />
+          <Drawer.Screen name="Barometer" component={TabFive} />
+          <Drawer.Screen name="About" component={About} />
+        </Drawer.Navigator>
+      </NavigationContainer>
+    </AppearanceProvider>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    height: 200,
-  },
-  tabs: {
-    flex: 1,
-    marginTop: 50,
-  },
-});

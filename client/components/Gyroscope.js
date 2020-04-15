@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Gyroscope } from "expo-sensors";
 import { useColorScheme } from "react-native-appearance";
 
-export default function TabOne() {
+export default function TabOne(props) {
   const theme = useColorScheme();
 
   const [data, setData] = useState({});
@@ -49,7 +49,7 @@ export default function TabOne() {
   if (theme === "dark") {
     return (
       <View style={styles.sensor}>
-        <Text style={styles.textDark}>Gyroscope:</Text>
+        <Text style={styles.textDarkHead}>Gyroscope {"\n"}</Text>
         <Text style={styles.textDark}>
           x: {round(x)} y: {round(y)} z: {round(z)}
         </Text>
@@ -72,7 +72,7 @@ export default function TabOne() {
   } else {
     return (
       <View style={styles.sensor}>
-        <Text style={styles.text}>Gyroscope:</Text>
+        <Text style={styles.textHead}>Gyroscope {"\n"}</Text>
         <Text style={styles.text}>
           x: {round(x)} y: {round(y)} z: {round(z)}
         </Text>
@@ -136,5 +136,16 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: "center",
+  },
+  textDarkHead: {
+    textAlign: "center",
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 35,
+  },
+  textHead: {
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 35,
   },
 });

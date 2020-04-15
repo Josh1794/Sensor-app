@@ -12,6 +12,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "sdkVersion": "37.0.0",
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -19,7 +20,8 @@
     "ios": {
       "supportsTablet": true,
       "userInterfaceStyle": "automatic",
-      "bundleIdentifier": "smartphone.sensor.app"
+      "bundleIdentifier": "smartphone.sensor.app",
+      "buildNumber": "1.0.0"
     },
     "description": "An app allowing users to explore the sensors in a modern smartphone",
     "githubUrl": "https://github.com/Josh1794/Sensor-app"

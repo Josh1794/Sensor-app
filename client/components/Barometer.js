@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Barometer } from "expo-sensors";
 import { useColorScheme } from "react-native-appearance";
 
-export default function TabFive(props) {
+export default function TabFive() {
   const theme = useColorScheme();
 
   const [data, setData] = useState({});
@@ -41,9 +41,12 @@ export default function TabFive(props) {
   if (theme === "dark") {
     return (
       <View style={styles.sensor}>
-        <Text style={styles.textDark}>Barometer:</Text>
+        <Text style={styles.textDarkHead}>Barometer {"\n"}</Text>
         <Text style={styles.textDark}>{pressure * 100} Pa</Text>
-
+        <Text style={styles.textDark}>or</Text>
+        <Text style={styles.textDark}>
+          {((pressure * 100) / 101325).toFixed(4)} atm {"\n"}
+        </Text>
         <View style={styles.buttonContainer}>
           <TouchableOpacity onPress={_toggle} style={styles.button}>
             <Text>Toggle</Text>
@@ -54,9 +57,13 @@ export default function TabFive(props) {
   } else {
     return (
       <View style={styles.sensor}>
-        <Text style={styles.textLight}>Barometer:</Text>
-        <Text style={styles.textLight}>{pressure * 100} Pa</Text>
+        <Text style={styles.textLightHead}>Barometer {"\n"}</Text>
 
+        <Text style={styles.textLight}>{pressure * 100} Pa</Text>
+        <Text style={styles.textLight}>or</Text>
+        <Text style={styles.textLight}>
+          {((pressure * 100) / 101325).toFixed(4)} atm {"\n"}
+        </Text>
         <View style={styles.buttonContainer}>
           <TouchableOpacity onPress={_toggle} style={styles.button}>
             <Text>Toggle</Text>
@@ -89,8 +96,21 @@ const styles = StyleSheet.create({
   textDark: {
     textAlign: "center",
     color: "white",
+    fontSize: 20,
   },
   textLight: {
     textAlign: "center",
+    fontSize: 20,
+  },
+  textDarkHead: {
+    textAlign: "center",
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 35,
+  },
+  textLightHead: {
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 35,
   },
 });

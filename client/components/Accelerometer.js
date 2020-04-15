@@ -49,12 +49,11 @@ export default function TabFour() {
   if (theme === "dark") {
     return (
       <View style={styles.sensor}>
-        <Text style={styles.textDark}>
-          Accelerometer: (in Gs where 1 G = 9.81 m s^-2)
-        </Text>
+        <Text style={styles.textDarkHead}>Accelerometer {"\n"}</Text>
         <Text style={styles.textDark}>
           x: {round(x)} y: {round(y)} z: {round(z)}
         </Text>
+        <Text style={styles.textDark}>(in Gs where 1 G = 9.81 m s^-2)</Text>
         <View style={styles.buttonContainer}>
           <TouchableOpacity onPress={_toggle} style={styles.button}>
             <Text>Toggle</Text>
@@ -74,12 +73,11 @@ export default function TabFour() {
   } else {
     return (
       <View style={styles.sensor}>
-        <Text style={styles.textLight}>
-          Accelerometer: (in Gs where 1 G = 9.81 m s^-2)
-        </Text>
+        <Text style={styles.textLightHead}>Accelerometer {"\n"}</Text>
         <Text style={styles.textLight}>
           x: {round(x)} y: {round(y)} z: {round(z)}
         </Text>
+        <Text style={styles.textLight}>(in Gs where 1 G = 9.81 m s^-2)</Text>
         <View style={styles.buttonContainer}>
           <TouchableOpacity onPress={_toggle} style={styles.button}>
             <Text>Toggle</Text>
@@ -136,5 +134,16 @@ const styles = StyleSheet.create({
   },
   textLight: {
     textAlign: "center",
+  },
+  textDarkHead: {
+    textAlign: "center",
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 35,
+  },
+  textLightHead: {
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 35,
   },
 });
