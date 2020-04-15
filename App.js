@@ -7,6 +7,8 @@ import {
   TabFive,
   Home,
   About,
+  MagnetometerSensor,
+  GPS,
 } from "./client/components";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { AppearanceProvider, useColorScheme } from "react-native-appearance";
@@ -42,8 +44,14 @@ export default App = () => {
             component={TabThree}
             initialParams={{ theme: useColorScheme() }}
           />
+          <Drawer.Screen
+            name="Magnetometer"
+            component={MagnetometerSensor}
+            initialParams={{ theme: useColorScheme() }}
+          />
           <Drawer.Screen name="Accelerometer" component={TabFour} />
           <Drawer.Screen name="Barometer" component={TabFive} />
+          <Drawer.Screen name="Location" component={GPS} />
           <Drawer.Screen name="About" component={About} />
         </Drawer.Navigator>
       </NavigationContainer>

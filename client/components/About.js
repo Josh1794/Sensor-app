@@ -11,6 +11,7 @@ export default function About() {
           I created this app to allow users to explore all the different sensors
           in a modern smartphone
         </Text>
+        <Text style={styles.textDark}>ADD INFO ABOUT EACH SENSOR HERE</Text>
       </View>
     );
   } else {
@@ -21,6 +22,7 @@ export default function About() {
           I created this app to allow users to explore all the different sensors
           in a modern smartphone
         </Text>
+        <Text style={styles.textLight}>ADD INFO ABOUT EACH SENSOR HERE</Text>
       </View>
     );
   }

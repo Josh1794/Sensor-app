@@ -8,10 +8,8 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "@eva-design/eva": "^1.4.0",
     "@react-navigation/drawer": "^5.4.1",
     "@react-navigation/native": "^5.1.5",
-    "@ui-kitten/components": "^4.4.1",
     "expo": "^37.0.6",
     "expo-sensors": "^8.1.0",
     "native": "^0.3.3",
