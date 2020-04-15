@@ -14,19 +14,16 @@ An app that allows users to explore the various sensors built into a modern smar
 
 ## Features
 
-- Gyroscope
 - Accelerometer
-- Pedometer
 - Barometer
+- Gyroscope
+- Location (Latitude, Longitude, Heading)
+- Magnetometer
+- Pedometer
 - Dark mode/Light mode based on system settings
 
-## Coming Soon
-
-- Speedometer
-- Improved UI
-
-## Images
+<!-- ## Images
 
 ![Accelerometer](client/assets/accelLight.PNG)
 ![Gyroscope](client/assets/gyroLight.PNG)
-![Pedometer](client/assets/pedometerLight.PNG)
+![Pedometer](client/assets/pedometerLight.PNG) -->
