@@ -24,8 +24,7 @@ An app that allows users to explore the various sensors built into a modern smar
 
 ## Video
 
-![App Video](./client/assets/Screen Recording 2020-04-17 at 1.06.56 PM.mov)
-
+<a href="https://drive.google.com/file/d/1QFV_9ZXGdh-DDXI3MnNYyirlus-cIWsv/view?usp=sharing" title="App Video" />
 <!-- ## Images
 
 ![Accelerometer](client/assets/accelLight.PNG)
