@@ -22,6 +22,10 @@ An app that allows users to explore the various sensors built into a modern smar
 - Pedometer
 - Dark mode/Light mode based on system settings
 
+## Video
+
+[App Video](./client/assets/Screen Recording 2020-04-17 at 1.06.56 PM.mov)
+
 <!-- ## Images
 
 ![Accelerometer](client/assets/accelLight.PNG)

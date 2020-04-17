@@ -16,6 +16,9 @@ export default class TabThree extends React.Component {
 
   componentDidMount() {
     this._subscribe();
+    this.setState({
+      theme: this.props.route.params.theme,
+    });
   }
 
   componentWillUnmount() {
@@ -49,7 +52,6 @@ export default class TabThree extends React.Component {
       (result) => {
         this.setState({
           pastStepCount: result.steps,
-          theme: this.props.route.params.theme,
         });
       },
       (error) => {
