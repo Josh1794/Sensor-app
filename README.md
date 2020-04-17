@@ -24,7 +24,7 @@ An app that allows users to explore the various sensors built into a modern smar
 
 ## Video
 
-<a href="https://drive.google.com/file/d/1QFV_9ZXGdh-DDXI3MnNYyirlus-cIWsv/view?usp=sharing" title="App Video"><img src="{image-url}" alt="Alternate Text" /></a>
+<a href="https://drive.google.com/file/d/1QFV_9ZXGdh-DDXI3MnNYyirlus-cIWsv/view?usp=sharing" title="App Video"><img src="{https://drive.google.com/file/d/1QFV_9ZXGdh-DDXI3MnNYyirlus-cIWsv/view?usp=sharing}" alt="Alternate Text" /></a>
 
 <!-- ## Images
 
