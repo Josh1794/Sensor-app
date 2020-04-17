@@ -24,9 +24,10 @@ An app that allows users to explore the various sensors built into a modern smar
 
 ## Video
 
-<a href="https://drive.google.com/file/d/1QFV_9ZXGdh-DDXI3MnNYyirlus-cIWsv/view?usp=sharing" title="App Video" />
+<a href="https://drive.google.com/file/d/1QFV_9ZXGdh-DDXI3MnNYyirlus-cIWsv/view?usp=sharing" title="App Video"><img src="{image-url}" alt="Alternate Text" /></a>
+
 <!-- ## Images
 
 ![Accelerometer](client/assets/accelLight.PNG)
 ![Gyroscope](client/assets/gyroLight.PNG)
-![Pedometer](client/assets/pedometerLight.PNG) -->
+![Pedometer](client/assets/pedometerLight.PNG)  -->
